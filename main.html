@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .fade-out-body {
+            animation: fadeOut 0.5s ease-out;
+        }
+
+        .navigation.fade-out {
+            animation: none; 
+        }
+    </style>
+
+    <script>
+        function goToTravelPage1() {
+            
+            document.body.classList.add('fade-out-body');
+
+            
+            setTimeout(function() {
+                window.location.href = 'main.html';
+            }, 400);
+        }
+        function goToTravelPage2() {
+            
+            document.body.classList.add('fade-out-body');
+
+            
+            setTimeout(function() {
+                window.location.href = '2.html';
+            }, 400);
+        }
+        function goToTravelPage3() {
+            
+            document.body.classList.add('fade-out-body');
+
+            
+            setTimeout(function() {
+                window.location.href = '3.html';
+            }, 400);
+        }
+        function goToTravelPage4() {
+            
+            document.body.classList.add('fade-out-body');
+
+            
+            setTimeout(function() {
+                window.location.href = '4.html';
+            }, 400);
+        }
+        function goToTravelPage5() {
+            
+            document.body.classList.add('fade-out-body');
+
+            
+            setTimeout(function() {
+                window.location.href = '5.html';
+            }, 400);
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.7234863094363!2d100.58290967600149!3d13.855629586547115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d3b2deb49ff%3A0xd2ed4165c39645cc!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lio4Lij4Li14Lib4LiX4Li44Lih!5e0!3m2!1sth!2sth!4v1701099455296!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-text">
+        <div class="map-text1">
+            <p><span class="material-symbols-outlined">
+                location_on 
+                </span> 1 สถานที่1 ระยะทาง (~~km)</p>
+                <button class="btn1" onclick=""  > เช็คอิน</button>
+                <hr>
+        </div>
+        <div class="map-text2">
+            <p><span class="material-symbols-outlined">
+                location_on 
+                </span> 2 สถานที่2 ระยะทาง (~~km)</p>
+                <button class="btn1" onclick="" > เช็คอิน</button>
+                <hr>
+        </div>
+        <div class="map-text3">
+            <p><span class="material-symbols-outlined">
+                location_on 
+                </span> 3 สถานที่3 ระยะทาง (~~km)</p>
+                <button class="btn1" onclick="" > เช็คอิน</button>
+                <hr>
+        </div>
+    </div>
+    </div>
+
+    <div class="navigation">
+        <ul>
+        <li class="list active">
+            <a href="#" onclick="goToTravelPage1()">                
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" onclick="goToTravelPage2()">
+                <span class="icon" >
+                    <ion-icon name="car-sport-outline"></ion-icon>
+                </span>
+                <span class="text">Travel</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" onclick="goToTravelPage3()">                
+                <span class="icon">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </span>
+                <span class="text">Bookmark</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" onclick="goToTravelPage4()">                
+                <span class="icon">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </span>
+                <span class="text">Profile</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" onclick="goToTravelPage5()">                
+                <span class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </span>
+                <span class="text">Setting</span>
+            </a>
+        </li>
+        <div class="indicator">
+
+        </div>
+    </ul>
+    </div>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click' ,activeLink));
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
